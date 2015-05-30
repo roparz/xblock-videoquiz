@@ -5,7 +5,7 @@ video = element.querySelector('video');
 
 var exercices = [
     {
-        "TimeStop": "1",
+        "TimeStop": "3",
         "Title": "Introduction",
         "Question":"Are you ready to begin , for real?",
         "Answers":["yes","no"],
@@ -13,7 +13,7 @@ var exercices = [
         "Help":"You should have a look at this previous lesson : arithmetic",
     },
     {
-        "TimeStop": "2",
+        "TimeStop": "5",
         "Title": "UI relationship",
         "Question":"For the u-i relationship of resistor in previous slide, what is the resistance for α=90º?",
         "Answers":["0Ω","90Ω", "180Ω", "∞Ω"],
@@ -21,7 +21,7 @@ var exercices = [
         "Help":"You should have a look at this previous lesson : arithmetic",
     },
     {
-        "TimeStop": "3",
+        "TimeStop": "10",
         "Title": "Current",
         "Question":"For a short circuit, which factor determines the current through it?",
         "Answers":["resistance", "voltage", "outer circuit", "answer 1 and 3"],
@@ -29,7 +29,7 @@ var exercices = [
         "Help":"You should have a look at this previous lesson : arithmetic",
     },
     {
-        "TimeStop": "3",
+        "TimeStop": "15",
         "Title": "Yolo",
         "Question":"Gné?",
         "Answers":["ubdkefgiurbf", "the previous answer", "the next answer", "the second answer", "the third answer"],

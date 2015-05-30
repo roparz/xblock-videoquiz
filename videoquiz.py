@@ -1,3 +1,4 @@
+#-*- coding: UTF8 -*-
 import pkg_resources
 import requests
 
@@ -22,7 +23,8 @@ class VideoQuizBlock(XBlock):
         Gets the content of a resource
         """
         resource_content = pkg_resources.resource_string(__name__, resource_path)
-        return unicode(resource_content)
+        #return unicode(resource_content)
+        return resource_content.decode("UTF8")
 
 
     def student_view(self, context):
@@ -37,6 +39,7 @@ class VideoQuizBlock(XBlock):
         html_str = pkg_resources.resource_string(__name__, "static/html/videoquiz.html")
         frag = Fragment(unicode(html_str).format(self=self, src=self.src))
         frag.add_javascript(self.load_resource("static/js/videoquiz.js"))
+        frag.add_css(self.load_resource("static/css/style.css"))
         frag.initialize_js('coucou')
 
         return frag
@@ -73,10 +76,10 @@ class VideoQuizBlock(XBlock):
     def workbench_scenarios():
         """A canned scenario for display in the workbench."""
         return [
-            ("video quiz",
+            ("Interactive video",
             """
             <vertical_demo>
-                <videoquiz src="http://techslides.com/demos/sample-videos/small.mp4" />
+                <videoquiz src="http://eliiie.com/gt/TSGELCT3T114-V006400_100.mp4" />
             </vertical_demo>
             """)
         ]
