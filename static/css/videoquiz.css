@@ -10,3 +10,16 @@
 /*
 *********** COMMON ************
 */
+button{
+    padding: 20px;
+    background: #666;
+    color: #fff;
+    font-size: 16px;
+    opacity: 1;
+    transition: All 0.5s ease;
+}
+
+button:hover{
+    opacity: 0.8;
+    transition: All 0.5s ease;
+}

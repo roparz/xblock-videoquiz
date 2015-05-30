@@ -1,16 +1,16 @@
 <div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
   <script id="metadata-editor-tpl" type="text/template">// JS crashes when empty //</script>
-  <video id='video_preview' src="{src}" controls></video>
+  <video id='video_preview' width="650px" src="{src}" controls></video>
   <br/>
   <div class="breakpoint-creation-form" style="display:none">
       <label class="label setting-label" for="breakpoint-time">Timecode</label>
       <input class="input setting-input" id="breakpoint-time" type="number"/>
       <br/>
       <label class="label setting-label" for="breakpoint-title">Titre du Quiz</label>
-      <input class="input setting-input" id="breakpoint-title" type="text"/>
+      <input class="input setting-input" id="breakpoint-title" type="text" style="width:350px"/>
       <br/>
       <label class="label setting-label" for="breakpoint-question">Question</label>
-      <input class="input setting-input" id="breakpoint-question" type="text"/>
+      <input class="input setting-input" id="breakpoint-question" type="text" style="width:350px"/>
       <br/>
       <div class="breakpoint-answers">
           <label class="label setting-label">Answers</label>
@@ -28,7 +28,7 @@
       <li class="field comp-setting-entry is-set">
           <div class="wrapper-comp-setting">
             <label class="label setting-label" for="video-src">Video URL</label>
-            <input class="input setting-input" id="video-src" value="{src}" type="text">
+            <input class="input setting-input" id="video-src" value="{src}" type="text" width="350px">
           </div>
       </li>
       <li class="field comp-setting-entry is-set">

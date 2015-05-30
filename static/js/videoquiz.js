@@ -4,6 +4,7 @@ function coucou(runtime, element) {
 video = element.querySelector('video');
 
 var exercices = [
+    {"TimeStop":"1.729884","Title":"My first Quiz","Question":"Is this project going to win ? ","Answers":["Maybe","Probably","Of course !"],"Right_answers":[1],"Help":"Seriously ?!"},
     {
         "TimeStop": "3",
         "Title": "Introduction",
@@ -114,12 +115,12 @@ video = element.querySelector('video');
             }
             for(var i=0; i<exercices[exercice]["Right_answers"].length; i++){
                 console.log(exercices[exercice]["Right_answers"]);
+                    console.log(exercices[exercice]["Right_answers"][i])
                 if(document.getElementById("answer"+exercices[exercice]["Right_answers"][i]).checked == true){
-                    console.log("et oui!")
-                    document.getElementById("answer_label"+i).className="good_answer";
+                    document.getElementById("answer_label"+exercices[exercice]["Right_answers"][i]).className="good_answer";
                     score_exercice = score_exercice + Math.round(100 / nb_answers);
                 }else{
-                    document.getElementById("answer_label"+i).className="forgeted_answer";
+                    document.getElementById("answer_label"+exercices[exercice]["Right_answers"][i]).className="forgeted_answer";
                     //score_exercice = score_exercice - Math.round(100 / nb_answers);
                     score_exercice = score_exercice - Math.round(200 / nb_answers);
                 }

@@ -95,6 +95,7 @@ function VideoQuizEditBlock(runtime, element) {
         });
         breakpoints = breakpoints.sort(BreakpointsSort);
         BreakpointsRender();
+        console.log(breakpoints);
         console.log("Breakpoint created");
     }
 
@@ -131,7 +132,10 @@ function VideoQuizEditBlock(runtime, element) {
                 html += answerHtml.join('');
             }
              html += '<span class="breakpoint-detail"> Hint : </span>' +  breakpoints[i].Help + '<br/>';
-            html += '</div>';
+            html += '<div>';
+            html += JSON.stringify(breakpoints[i]);
+           html += '</div>';
+          html += '</div>';
             html += '</li>';
         }
         console.log(breakpoints);
