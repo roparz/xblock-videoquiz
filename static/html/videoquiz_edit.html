@@ -1,0 +1,52 @@
+<div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
+  <script id="metadata-editor-tpl" type="text/template">// JS crashes when empty //</script>
+  <video id='video_preview' src="{src}" controls></video>
+  <br/>
+  <div class="breakpoint-creation-form" style="display:none">
+      <label class="label setting-label" for="breakpoint-time">Timecode</label>
+      <input class="input setting-input" id="breakpoint-time" type="number"/>
+      <br/>
+      <label class="label setting-label" for="breakpoint-title">Titre du Quiz</label>
+      <input class="input setting-input" id="breakpoint-title" type="text"/>
+      <br/>
+      <label class="label setting-label" for="breakpoint-question">Question</label>
+      <input class="input setting-input" id="breakpoint-question" type="text"/>
+      <br/>
+      <div class="breakpoint-answers">
+          <label class="label setting-label">Answers</label>
+          <button type="button" class="breakpoint-answer-add">+</button>
+          <ul class="breakpoint-answers-list">
+          </ul>
+      </div
+      <label class="label setting-label" for="breakpoint-hint">Hint</label>
+      <input class="input setting-input" id="breakpoint-hint" type="text"/>
+      <br/>
+      <button type="button" class="breakpoint-creation-button">Validate</button>
+  </div>
+  <button type="button" class="breakpoint-button">Create breakpoint</button>
+  <ul class="list-input settings-list">
+      <li class="field comp-setting-entry is-set">
+          <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="video-src">Video URL</label>
+            <input class="input setting-input" id="video-src" value="{src}" type="text">
+          </div>
+      </li>
+      <li class="field comp-setting-entry is-set">
+          <div class="wrapper-comp-setting">
+              <ul class="breakpoints-list">
+              </ul>
+          </div>
+      </li>
+  </ul>
+  <div class="xblock-actions">
+    <ul>
+      <li class="action-item">
+        <a href="#" class="button action-primary save-button">Save</a>
+      </li>
+
+      <li class="action-item">
+        <a href="#" class="button cancel-button">Cancel</a>
+      </li>
+    </ul>
+  </div>
+</div>

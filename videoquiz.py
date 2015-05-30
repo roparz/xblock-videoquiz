@@ -41,6 +41,33 @@ class VideoQuizBlock(XBlock):
 
         return frag
 
+    def studio_view(self, context):
+        """
+        Editing view in Studio
+        """
+        html_str = pkg_resources.resource_string(__name__, "static/html/videoquiz_edit.html")
+        frag = Fragment(unicode(html_str).format(self=self, src=self.src))
+        frag.add_javascript(self.load_resource("static/js/videoquiz_edit.js"))
+
+        frag.initialize_js('VideoQuizEditBlock')
+
+        return frag
+
+    @XBlock.json_handler
+    def studio_submit(self, submissions, suffix=''):
+        log.info(u'Received submissions: {}'.format(submissions))
+
+        self.api_key = submissions['api_key']
+
+        if submissions.get('href', self.href) != self.href: # URL changed
+            self.href = submissions['href']
+
+            # Update the video details
+            self.set_api_params_from_href()
+
+        return {
+            'result': 'success',
+        }
 
     @staticmethod
     def workbench_scenarios():

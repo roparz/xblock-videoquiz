@@ -1,2 +1,3 @@
 xblock_videoquiz.egg-info/*
 *.pyc
+.DS_Store
