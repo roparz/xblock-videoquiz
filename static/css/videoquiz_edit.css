@@ -1,0 +1,126 @@
+body{
+    background-color: #333;
+    padding:0;
+    background-image: url('http://eliiie.com/gt/bg2.jpg');
+    background-size: 100%;
+}
+
+/*
+*********** STUDIO ***********
+*/
+#settings-tab.wrapper{
+    width: 960px;
+    height: 480px;
+    border: 1px solid #2244FF;
+}
+
+/*
+*********** COMMON ************
+*/
+.main{
+    padding: 5%;
+    max-width: 800px;
+    margin: auto;
+}
+
+button{
+    padding: 20px;
+    background: #006BA2;
+    color: #fff;
+    font-size: 16px;
+    opacity: 1;
+    transition: All 0.5s ease;
+}
+
+button:hover{
+    opacity: 0.8;
+    transition: All 0.5s ease;
+}
+input{
+    margin: 5px;
+    border:none;
+    padding: 20px;
+    background: rgba(50,50,50,0.9);
+    box-shadow: 3px 3px 3px #333 inset;
+    color: #fff;
+    font-size: 16px;
+    opacity: 1;
+    transition: All 0.5s ease;
+}
+
+input:hover{
+    opacity: 0.8;
+    transition: All 0.5s ease;
+}
+
+ul, li, li a{
+    text-decoration: none;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.action-item a{
+    margin: 5px;
+    border:none;
+    padding: 20px;
+    background: #006BA2;
+    color: #fff !important;
+    font-size: 16px;
+    opacity: 1;
+    transition: All 0.5s ease;
+    display: block;
+}
+
+.action-item a:hover{
+    opacity: 0.6;
+}
+
+label{
+    padding: 20px;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    opacity: 1;
+    transition: All 0.5s ease;
+}
+
+.xblock_asides-v1{
+    display: none !important;
+}
+
+video{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    z-index: 5;
+}
+
+.vertical{
+    border:none !important;
+}
+
+.breakpoint-details{
+    background-color: rgba(255,255,255,0.7);
+    padding: 2%;
+    text-align: left;
+}
+
+.breakpoint-button{
+    margin:30px;
+}
+
+.debug{
+    display: none;
+}
+
+#video-src{
+    width: 75%;
+}
+
+
+.breakpoint-creation-form{
+    background-color: rgba(255,255,255,0.2);
+    padding: 3%;
+}

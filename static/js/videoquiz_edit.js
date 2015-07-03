@@ -5,13 +5,13 @@ function VideoQuizEditBlock(runtime, element) {
     var breakpointsElt = element.querySelector('ul.breakpoints-list');
     var breakpointAnswersListElt = element.querySelector('ul.breakpoint-answers-list');
 
-    video.addEventListener("seeking", BreakpointTimeUpdate);
     breakpointsElt.addEventListener('click', BreakpointsListClick);
     breakpointAnswersListElt.addEventListener('click', BreakpointAnswersListClick);
     element.querySelector('button.breakpoint-answer-add').addEventListener("click", BreakpointAnswerAdd);
     element.querySelector('button.breakpoint-creation-button').addEventListener("click", BreakpointCreate);
     element.querySelector('button.breakpoint-button').addEventListener("click", BreakpointFormDisplay);
     element.querySelector('#video-src').addEventListener("change", VideoSourceSet);
+    video.addEventListener("seeking", BreakpointTimeUpdate);
 
     function BreakpointsListClick(e) {
         var elt = e.target;
@@ -147,7 +147,8 @@ function VideoQuizEditBlock(runtime, element) {
     }
 
     function VideoSourceSet(e){
-        console.log("set video source: " + new_src);
+        //console.log("set video source: " + new_src);
+        console.log(e.target.value);
         video.src = e.target.value;
         video.load;
         VideoEnabled();
@@ -157,6 +158,6 @@ function VideoQuizEditBlock(runtime, element) {
 
 function VideoEnabled(){
     if (document.getElementsByTagName('video')[0].src != ''){
-
+        console.log("video active");
     }
 }

@@ -3,10 +3,12 @@ function coucou(runtime, element) {
 
 video = element.querySelector('video');
 
+video.src= "https://pdlvimeocdn-a.akamaihd.net/95805/556/244565158.mp4?token2=1434624912_3747d1e923964b1a1a1cb6e4e83dc2a5&aksessionid=f44371212226e4f9";
+
 var exercices = [
-    {"TimeStop":"1.729884","Title":"My first Quiz","Question":"Is this project going to win ? ","Answers":["Maybe","Probably","Of course !"],"Right_answers":[1],"Help":"Seriously ?!"},
+   {"TimeStop":"4.591361","Title":"Gutenberg Technology et vous","Question":"Que pensez vous de cette application","Answers":["Très bien","Incroyable","Magnifique"],"Right_answers":[1,2],"Help":"Vous devriez télécharger le reste de la collection"},
     {
-        "TimeStop": "3",
+        "TimeStop": "10",
         "Title": "Introduction",
         "Question":"Are you ready to begin , for real?",
         "Answers":["yes","no"],
@@ -14,7 +16,7 @@ var exercices = [
         "Help":"You should have a look at this previous lesson : arithmetic",
     },
     {
-        "TimeStop": "5",
+        "TimeStop": "15",
         "Title": "UI relationship",
         "Question":"For the u-i relationship of resistor in previous slide, what is the resistance for α=90º?",
         "Answers":["0Ω","90Ω", "180Ω", "∞Ω"],
@@ -22,7 +24,7 @@ var exercices = [
         "Help":"You should have a look at this previous lesson : arithmetic",
     },
     {
-        "TimeStop": "10",
+        "TimeStop": "20",
         "Title": "Current",
         "Question":"For a short circuit, which factor determines the current through it?",
         "Answers":["resistance", "voltage", "outer circuit", "answer 1 and 3"],
@@ -30,7 +32,7 @@ var exercices = [
         "Help":"You should have a look at this previous lesson : arithmetic",
     },
     {
-        "TimeStop": "15",
+        "TimeStop": "25",
         "Title": "Yolo",
         "Question":"Gné?",
         "Answers":["ubdkefgiurbf", "the previous answer", "the next answer", "the second answer", "the third answer"],
@@ -109,9 +111,10 @@ video = element.querySelector('video');
                     score_exercice = score_exercice - Math.round(100 / nb_answers);
                     nb_answered_answers++;
                 }
-                if(nb_answered_answers<1){
+                /*if(nb_answered_answers<1){
                     score_exercice=0;
-                }
+                    console.log("oh");
+                }*/
             }
             for(var i=0; i<exercices[exercice]["Right_answers"].length; i++){
                 console.log(exercices[exercice]["Right_answers"]);
@@ -119,12 +122,14 @@ video = element.querySelector('video');
                 if(document.getElementById("answer"+exercices[exercice]["Right_answers"][i]).checked == true){
                     document.getElementById("answer_label"+exercices[exercice]["Right_answers"][i]).className="good_answer";
                     score_exercice = score_exercice + Math.round(100 / nb_answers);
+                    console.log("ih");
                 }else{
                     document.getElementById("answer_label"+exercices[exercice]["Right_answers"][i]).className="forgeted_answer";
                     //score_exercice = score_exercice - Math.round(100 / nb_answers);
-                    score_exercice = score_exercice - Math.round(200 / nb_answers);
+                    score_exercice = score_exercice - Math.round(100 / nb_answers);
+                    console.log("ah");
                 }
-            if(score_exercice<0){
+            if(score_exercice<2){
                 score_exercice=0;
             }
             if(score_exercice<75){

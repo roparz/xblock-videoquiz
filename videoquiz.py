@@ -51,7 +51,7 @@ class VideoQuizBlock(XBlock):
         html_str = pkg_resources.resource_string(__name__, "static/html/videoquiz_edit.html")
         frag = Fragment(unicode(html_str).format(self=self, src=self.src))
         frag.add_javascript(self.load_resource("static/js/videoquiz_edit.js"))
-
+        frag.add_css(self.load_resource("static/css/videoquiz_edit.css"))
         frag.initialize_js('VideoQuizEditBlock')
 
         return frag
